@@ -163,7 +163,7 @@ export default function Home() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="gradient">Get Started</NavbarButton>
+            <NavbarButton href="https://bookeasy-app.vercel.app" variant="gradient">Get Started</NavbarButton>
           </div>
         </NavBody>
 
@@ -186,7 +186,7 @@ export default function Home() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4 mt-4">
-              <NavbarButton onClick={() => setIsMenuOpen(false)} variant="gradient" className="w-full">
+              <NavbarButton href="https://bookeasy-app.vercel.app" onClick={() => setIsMenuOpen(false)} variant="gradient" className="w-full">
                 Get Started
               </NavbarButton>
             </div>
@@ -230,7 +230,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <Button className="bg-gradient-to-r from-[#1E0D73] to-[#3D2A9C] hover:from-[#3D2A9C] hover:to-[#1E0D73] text-white text-lg px-8 py-7 rounded-xl group relative overflow-hidden">
-                <span className="relative z-10">Get Started</span>
+                <span className="relative z-10 " href="https://bookeasy-app.vercel.app" >Get Started</span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-[#FF9800] to-[#FF9800]/80 z-0"
                   initial={{ x: "-100%" }}
@@ -1044,7 +1044,7 @@ export default function Home() {
             </p>
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
               <Button className="bg-[#FF9800] hover:bg-[#FF9800]/90 text-white text-lg px-10 py-7 rounded-xl group relative overflow-hidden">
-                <span className="relative z-10">Get Started Today</span>
+                <span className="relative z-10" href="https://bookeasy-app.vercel.app">Get Started Today</span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-[#FF9800]/80 to-[#FF9800] z-0"
                   initial={{ x: "100%" }}
