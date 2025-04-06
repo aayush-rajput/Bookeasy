@@ -186,7 +186,7 @@ export default function Home() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4 mt-4">
-              <NavbarButton href="https://bookeasy-app.vercel.app" onClick={() => setIsMenuOpen(false)} variant="gradient" className="w-full">
+              <NavbarButton href="https://bookeasy-app.vercel.app" variant="gradient" className="w-full">
                 Get Started
               </NavbarButton>
             </div>
