@@ -230,7 +230,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <Button className="bg-gradient-to-r from-[#1E0D73] to-[#3D2A9C] hover:from-[#3D2A9C] hover:to-[#1E0D73] text-white text-lg px-8 py-7 rounded-xl group relative overflow-hidden">
-                <span className="relative z-10 " href="https://bookeasy-app.vercel.app" >Get Started</span>
+                <span className="relative z-10 " onclick="location.href='https://bookeasy-app.vercel.app';" >Get Started</span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-[#FF9800] to-[#FF9800]/80 z-0"
                   initial={{ x: "-100%" }}
