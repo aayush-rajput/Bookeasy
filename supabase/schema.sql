@@ -33,9 +33,12 @@ create policy "Users can update own profile."
   using ( auth.uid() = id );
 
 -- 3. Create Spaces Table
+create type space_category as enum ('Restaurant', 'Event', 'Banquet Hall');
+
 create table public.spaces (
   id uuid default gen_random_uuid() primary key,
   vendor_id uuid references public.users(id) on delete cascade not null,
+  category space_category not null default 'Banquet Hall'::space_category,
   name text not null,
   description text,
   price_per_hour numeric not null,
@@ -78,6 +81,7 @@ create table public.bookings (
   space_id uuid references public.spaces(id) on delete cascade not null,
   start_time timestamp with time zone not null,
   end_time timestamp with time zone not null,
+  guests integer default 1 not null,
   status booking_status default 'pending'::booking_status,
   total_price numeric not null,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null

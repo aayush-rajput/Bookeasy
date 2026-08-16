@@ -200,9 +200,9 @@ export default function Home() {
           <div className="flex-1 space-y-6">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="font-futura text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#1E0D73] leading-tight">
-                Book Local Spaces <br />
+                Book Restaurants & <br />
                 <span className="text-[#FF9800] relative">
-                  Effortlessly
+                  Banquet Halls
                   <motion.span
                     className="absolute -bottom-2 left-0 w-full h-1 bg-[#FF9800]"
                     initial={{ width: 0 }}
@@ -219,8 +219,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Connect with local businesses and book their spaces for your events, meetings, or activities with just a
-              few clicks.
+              Whether you're looking for a cozy restaurant, a lively event space, or an elegant banquet hall, BookEasy connects you with the best local venues.
             </motion.p>
 
             <motion.div
@@ -468,37 +467,37 @@ export default function Home() {
             {[
               {
                 icon: <Calendar className="h-7 w-7 text-white" />,
-                title: "Calendar View",
+                title: "Seamless Booking Flow",
                 description:
-                  "Browse available slots with our intuitive calendar interface. Filter by date, time, and venue type.",
+                  "Easily select dates, times, durations, and guest counts for any Restaurant, Event, or Banquet Hall.",
                 color: "#1E0D73",
               },
               {
                 icon: <Mail className="h-7 w-7 text-white" />,
-                title: "Booking Confirmation",
+                title: "Customer & Vendor Portals",
                 description:
-                  "Receive instant email confirmations and in-app notifications for all your bookings and updates.",
+                  "Dedicated dashboards for customers to browse categories and vendors to manage their venue listings.",
                 color: "#FF9800",
               },
               {
                 icon: <QrCode className="h-7 w-7 text-white" />,
-                title: "QR Code Check-in",
+                title: "Three Distinct Roles",
                 description:
-                  "Skip the line with our contactless QR code check-in system. Fast, secure, and convenient.",
+                  "Tailored experiences for Customers, Vendors, and Admins—all built on secure Supabase authentication.",
                 color: "#1E0D73",
               },
               {
                 icon: <Shield className="h-7 w-7 text-white" />,
-                title: "Admin Panel",
+                title: "Admin Oversight",
                 description:
-                  "Powerful admin tools for businesses to manage bookings, spaces, and customer interactions.",
+                  "Powerful Admin tools give full visibility into all vendors, spaces, and customer reservations across the platform.",
                 color: "#FF9800",
               },
               {
                 icon: <Building className="h-7 w-7 text-white" />,
-                title: "Business Verification",
+                title: "Diverse Venues",
                 description:
-                  "Trust our verified businesses. We ensure all listings are legitimate and meet our quality standards.",
+                  "Filter and browse through carefully curated tabs of Restaurants, Events, and Banquet Halls.",
                 color: "#1E0D73",
               },
               {
@@ -595,17 +594,17 @@ export default function Home() {
                 step: 1,
                 title: "Discover Spaces",
                 description:
-                  "Browse through our curated list of local venues and filter by type, location, and amenities.",
+                  "Browse through our curated tabs of Restaurants, Events, and Banquet Halls.",
               },
               {
                 step: 2,
                 title: "Book Your Slot",
-                description: "Select your preferred date and time from the available slots and confirm your booking.",
+                description: "Select your preferred date, time, duration, and guest count to request a booking instantly.",
               },
               {
                 step: 3,
                 title: "Enjoy Your Event",
-                description: "Use your QR code for seamless check-in and enjoy your booked space without any hassle.",
+                description: "Log in as a Vendor or Admin to see your reservation seamlessly appear in the management dashboards.",
               },
             ].map((step, index) => (
               <motion.div
@@ -725,18 +724,17 @@ export default function Home() {
                 FOR BUSINESSES
               </div>
               <h2 className="font-futura text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Grow Your Business with BookEasy
+                List Your Venue on BookEasy
               </h2>
               <p className="text-white/80 text-lg">
-                Join hundreds of local businesses already using BookEasy to increase visibility, streamline bookings,
-                and grow their customer base.
+                Join local Restaurants, Event spaces, and Banquet Halls using BookEasy to streamline bookings and grow their customer base.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Increase visibility with our growing user base",
-                  "Manage all your bookings from a single dashboard",
-                  "Reduce no-shows with automated reminders",
-                  "Gain valuable insights with detailed analytics",
+                  "List your Restaurant, Event space, or Banquet Hall",
+                  "Manage all customer bookings from a dedicated dashboard",
+                  "Track guest counts and booking durations easily",
+                  "Gain visibility across our entire customer base",
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -1046,7 +1044,7 @@ export default function Home() {
             </p>
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
               <Button className="bg-[#FF9800] hover:bg-[#FF9800]/90 text-white text-lg px-10 py-7 rounded-xl group relative overflow-hidden">
-                <span className="relative z-10" href="https://bookeasy-app.vercel.app">Get Started Today</span>
+                <span className="relative z-10">Get Started Today</span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-[#FF9800]/80 to-[#FF9800] z-0"
                   initial={{ x: "100%" }}

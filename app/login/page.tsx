@@ -25,17 +25,6 @@ const roleConfig = {
     perks: ['Easy space listing', 'Real-time bookings', 'Revenue analytics'],
     illustration: '🏢',
   },
-  admin: {
-    label: 'Admin',
-    icon: ShieldCheck,
-    color: 'from-[#7B2D8B] to-[#4A1460]',
-    accent: '#7B2D8B',
-    lightBg: 'bg-[#7B2D8B]/10',
-    badge: 'text-[#7B2D8B] bg-[#7B2D8B]/10',
-    description: 'Manage the entire BookEasy platform',
-    perks: ['Full platform access', 'User management', 'Analytics & reports'],
-    illustration: '⚙️',
-  },
 }
 
 export default async function LoginPage({
@@ -67,7 +56,6 @@ export default async function LoginPage({
           <h2 className="text-4xl font-futura font-bold mb-4 leading-tight">
             {role === 'user' && 'Find Your Perfect Space'}
             {role === 'vendor' && 'Grow Your Business'}
-            {role === 'admin' && 'Platform Control Center'}
           </h2>
           <p className="text-white/80 text-lg mb-8">{config.description}</p>
           <div className="space-y-3">
@@ -203,21 +191,13 @@ export default async function LoginPage({
                 >
                   Sign In
                 </button>
-                {role !== 'admin' && (
-                  <button
-                    formAction={signup}
-                    className="flex-1 py-3 px-4 rounded-xl font-bold text-sm border-2 border-[#B7BDB7]/50 text-[#050315]/70 hover:border-[#1E0D73] hover:text-[#1E0D73] transition-colors bg-white"
-                  >
-                    Sign Up
-                  </button>
-                )}
+                <button
+                  formAction={signup}
+                  className="flex-1 py-3 px-4 rounded-xl font-bold text-sm border-2 border-[#B7BDB7]/50 text-[#050315]/70 hover:border-[#1E0D73] hover:text-[#1E0D73] transition-colors bg-white"
+                >
+                  Sign Up
+                </button>
               </div>
-
-              {role === 'admin' && (
-                <p className="text-xs text-center text-[#050315]/50 pt-2">
-                  Admin accounts are created by the platform. Contact support if you need access.
-                </p>
-              )}
             </form>
           </div>
 

@@ -25,6 +25,7 @@ export default async function VendorSpacesPage() {
         end_time,
         status,
         total_price,
+        guests,
         users (full_name, email)
       )
     `)
@@ -104,6 +105,9 @@ export default async function VendorSpacesPage() {
                     ) : (
                       <div className="flex items-center justify-center h-full text-5xl">🏛️</div>
                     )}
+                    <div className="absolute top-2 left-2 bg-[#1E0D73]/80 backdrop-blur-sm text-white rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+                      {space.category}
+                    </div>
                   </div>
 
                   {/* Space Details */}
@@ -141,7 +145,11 @@ export default async function VendorSpacesPage() {
                                 <p className="text-sm font-medium text-[#050315]">{booking.users?.full_name || booking.users?.email || 'Customer'}</p>
                                 <div className="flex items-center gap-1 text-xs text-[#050315]/60 mt-0.5">
                                   <Clock className="h-3 w-3" />
-                                  {new Date(booking.start_time).toLocaleDateString()} · {2}hrs
+                                  {new Date(booking.start_time).toLocaleDateString()} · {Math.round((new Date(booking.end_time).getTime() - new Date(booking.start_time).getTime()) / (1000 * 60 * 60))}hrs
+                                </div>
+                                <div className="flex items-center gap-1 text-xs text-[#050315]/60 mt-0.5">
+                                  <Users className="h-3 w-3" />
+                                  {booking.guests} {booking.guests === 1 ? 'guest' : 'guests'}
                                 </div>
                               </div>
                               <div className="text-right">

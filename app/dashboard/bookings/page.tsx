@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import { Calendar, MapPin, Clock, DollarSign } from 'lucide-react'
+import { Calendar, MapPin, Clock, DollarSign, Users } from 'lucide-react'
 
 const statusColors: Record<string, string> = {
   pending: 'bg-yellow-100 text-yellow-700 border-yellow-200',
@@ -99,6 +99,10 @@ export default async function MyBookingsPage() {
                 <div className="flex items-center gap-2 text-sm font-bold text-[#1E0D73]">
                   <DollarSign className="h-4 w-4" />
                   ${booking.total_price} total
+                </div>
+                <div className="flex items-center gap-2 text-sm text-[#050315]/70">
+                  <Users className="h-4 w-4 text-[#1E0D73]" />
+                  {booking.guests} {booking.guests === 1 ? 'guest' : 'guests'}
                 </div>
 
                 {/* Show customer info for vendors, vendor info for customers */}
